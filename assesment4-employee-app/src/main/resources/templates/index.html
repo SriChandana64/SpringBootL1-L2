@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Registration</title>
+</head>
+<body>
+
+<h2>Employee Registration Form</h2>
+
+<form th:action="@{/save}" th:object="${employee}" method="post">
+
+    Employee ID: <input type="text" th:field="*{employeeId}" /><br><br>
+    Name: <input type="text" th:field="*{employeeName}" /><br><br>
+    Email: <input type="email" th:field="*{employeeEmail}" /><br><br>
+    Location: <input type="text" th:field="*{location}" /><br><br>
+
+    <button type="submit">Save</button>
+
+</form>
+
+<br>
+<a href="/displayAll">View All Employees</a>
+
+</body>
+</html>
